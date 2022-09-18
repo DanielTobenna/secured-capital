@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'universalcapitals.org/images/favicon.png' %}">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="sSRUVxA4sbQpOsVVYOuCUuEPaSOUZQ52uT0dbzeZ">
+    <script>
+        window.Laravel = {"csrfToken":"sSRUVxA4sbQpOsVVYOuCUuEPaSOUZQ52uT0dbzeZ"};
+        window.homepage = 'index.html';
+        window.updateBTC = '';
+    </script>
+
+
+    <title>Welcome - Securedcapital-network </title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <meta name="robots" content="index, follow"/>
+    <link rel="canonical" href="{% url 'signin' %}"/>
+
+    <meta name="description" content="Your chance to seize the Blockchain Opportunity. Cryptotrades, Llc is a boutique financial firm active in value creation opportunities around the blockchain asset class and in traditional asset management. We strive to offer superior"/>
+
+    <!--Open graph-->
+    <meta property="og:url" content="{% url 'signin' %}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="Your chance to seize the Blockchain Opportunity. Cryptotrades, Llc is a boutique financial firm active in value creation opportunities around the blockchain asset class and in traditional asset management. We strive to offer superior"/>
+    <meta property="og:title" content="Welcome"/>
+    <meta property="og:image" content="{% static 'universalcapitals.org/images/favicon.png' %}"/>
+    <!--Twitter card-->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:domain"/>
+    <meta name="twitter:description" content="Your chance to seize the Blockchain Opportunity. Cryptotrades, Llc is a boutique financial firm active in value creation opportunities around the blockchain asset class and in traditional asset management. We strive to offer superior"/>
+    <meta name="twitter:title" content="Welcome"/>
+    <meta name="twitter:image" content="{% static 'universalcapitals.org/images/favicon.png' %}"/>
+
+    <meta property="og:image" content="{% static 'universalcapitals.org/images/favicon.png' %}"/>
+
+    <!--
+    Theme Styling starts here
+    -->
+
+    <!-- Common Plugins -->
+    <link href="{% static 'universalcapitals.org/dash/lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Vector Map Css-->
+    <link href="{% static 'universalcapitals.org/dash/lib/vectormap/jquery-jvectormap-2.0.2.css' %}" rel="stylesheet"/>
+
+    <!-- Chart C3 -->
+    <link href="{% static 'universalcapitals.org/dash/lib/chart-c3/c3.min.css' %}" rel="stylesheet">
+    <link href="https://universalcapitals.org/dash/lib/chartjs/chartjs-sass-defxxxault.css" rel="stylesheet">
+
+    <!-- DataTables -->
+    <link href="{% static 'universalcapitals.org/dash/lib/datatables/jquery.dataTables.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'universalcapitals.org/dash/lib/datatables/responsive.bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'universalcapitals.org/dash/lib/toast/jquery.toast.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Css-->
+    <link href="{% static 'universalcapitals.org/css/colors.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'universalcapitals.org/css/custom.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'universalcapitals.org/dash/scss/style.css' %}" rel="stylesheet">
+    <link href="{% static 'universalcapitals.org/dash/scss/toastr.min.css' %}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--
+    Theme Styling ends here
+    -->
+
+    <style>
+        div.centered {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            background-color: white;
+        }
+        .messages{
+            color: red;
+            text-align: center;
+        }
+        body{
+            background-color: green;
+        }
+    </style>
+        </head>
+<body>
+
+    <section>
+        <div class="container">
+            <div class="centered">
+
+
+                <h2>Register</h2>
+                <hr/>
+
+
+
+
+
+ <form method="POST">
+    {% csrf_token %}
+        {% if form.errors %}
+            {% for field in form %}
+            <p class="messages">
+                <strong class="messages">{{ field.errors|escape }}</strong>
+            </p>
+            {% endfor %}
+        {% endif %}
+
+
+                                        <div class="control-group row">
+                        <div class=" floating-label-form-group col-md-6">
+                            <label>Firstname</label>
+                            {{form.first_name}}
+                            <p class="help-block text-danger"></p>
+                                                    </div>
+                        <div class=" floating-label-form-group col-md-6">
+                            <label>Lastname</label>
+                            {{form.last_name}}
+                            <p class="help-block text-danger"></p>
+                                                    </div>
+                    </div>
+                    <div class="control-group row">
+                        <div class=" floating-label-form-group col-md-12">
+                            <label>Email Address</label>
+                            {{form.email}}
+                            <p class="help-block text-danger"></p>
+                                                    </div>
+                        <div class=" floating-label-form-group col-md-6">
+                            <label>Username</label>
+                            {{form.username}}
+                            <p class="help-block text-danger"></p>
+                                                    </div>
+                    </div>
+                    <div class="control-group row">
+                        <div class=" floating-label-form-group col-md-6">
+                            <label>Password</label>
+                            {{form.password1}}
+                            <p class="help-block text-danger"></p>
+                                                    </div>
+                        <div class=" floating-label-form-group col-md-6">
+                            <label>Confirm Password</label>
+                            {{form.password2}}
+                            <p class="help-block text-danger"></p>
+                                                    </div>
+                    </div>
+                    <hr/>
+                    <p>
+                        By registering on this site, you agree with our <a target="_blank" href="{% url 'terms' %}">Terms
+                            and conditions</a>
+                    </p>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Register</button>
+
+                        <a style="margin-left: 10px" href="{% url 'signin' %}">
+                            Already have an account?
+                        </a>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </section>
+
+<div id="page-loader">
+        <div id="loader" style="display: none"
+     class="text-center ">
+    <img src="{% static 'universalcapitals.org/images/loader.html' %}" alt=""/>
+    <p class="text-center grey-text">
+        Just a moment...
+    </p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Tracking and chat scripts goes here-->
+    <!--telegram chat widget-->
+    <!--<script src="https://apps.elfsight.com/p/platform.js" defer></script>-->
+    <!--<div class="elfsight-app-98796db3-e963-4a5d-a34b-614f17637ab6"></div>-->
+    <script src="{% static 'static.elfsight.com/platform/platform.js' %}" defer></script>
+    <div class="elfsight-app-05082fc1-0e8d-4a71-b05d-7c668b1b3117"></div>
+    <!--end telegram chat widget-->
+
+
+    <script>
+                        /* Because i didnt set placeholder values in forms.py they will be set here using vanilla Javascript
+        //We start indexing at one because CSRF_token is considered and input field
+         */
+
+        //Query All input fields
+        var form_fields = document.getElementsByTagName('input')
+        form_fields[1].placeholder='Firstname..';
+        form_fields[2].placeholder='Lastname..';
+        form_fields[3].placeholder='Email address..';
+        form_fields[4].placeholder='Username..';
+        form_fields[5].placeholder='Enter password...';
+        form_fields[6].placeholder='Re-enter Password...';
+
+
+        for (var field in form_fields){
+            form_fields[field].className += ' form-control'
+        }
+    </script>
+
+
+</body>
+
+<!-- Mirrored from www.universalcapitals.org/?a=signup by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Jul 2022 21:01:39 GMT -->
+</html>
+
+
+

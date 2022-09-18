@@ -1,0 +1,414 @@
+/*
+Copyright 2017 Y!Bambara.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+html,body{
+    /*height: 100%;*/
+}
+
+a{
+    /*color: #9a9827;*/
+}
+
+main{
+    /*100% - footer, assuming header is fixed*/
+    /*min-height: calc(100% - 53px);*/
+}
+
+.auth-form{
+    /*margin: 5em auto;*/
+}
+
+.outline-all{
+    border: lightgray thin solid !important;
+}
+
+.btn{
+    cursor: pointer;
+}
+
+/** Padding and Margin**/
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.tiny-padding {
+    padding: 0.5em;
+}
+.tiny-padding-top {
+    padding-top: 0.5em;
+}
+.tiny-padding-bottom {
+    padding-bottom: 0.5em;
+}
+
+.padding-1em {
+    padding: 1em;
+}
+
+.padding-2em {
+    padding: 2em;
+}
+
+.padding-top-1em {
+    padding-top: 1em !important;
+}
+
+.padding-btm-1em {
+    padding-bottom: 1em !important;
+}
+
+.padding-top-2em {
+    padding-top: 2em !important;
+}
+
+.padding-btm-2em {
+    padding-bottom: 2em !important;
+}
+
+.padding-top-4em {
+    padding-top: 4em !important;
+}
+
+.padding-btm-4em {
+    padding-bottom: 4em !important;
+}
+
+.tiny-margin{
+    margin: .5em;
+}
+.tiny-margin-top{
+    margin-top: .5em;
+}
+.tiny-margin-bottom{
+    margin-bottom: .5em;
+}
+
+.margin-1em{
+    margin: 1em;
+}
+
+.margin-btm-1em {
+    margin-bottom: 1em !important;
+}
+
+.margin-top-1em {
+    margin-top: 1em !important;
+}
+
+.margin-btm-2em {
+    margin-bottom: 2em !important;
+}
+
+.margin-top-2em {
+    margin-top: 2em !important;
+}
+
+.margin-btm-4em {
+    margin-bottom: 4em !important;
+}
+
+.margin-top-4em {
+    margin-top: 4em !important;
+}
+
+
+/*Fonts*/
+.font-sm{
+    font-size: .8em !important;
+}
+
+.font-lg{
+    font-size: 2em !important;
+}
+
+.font-xl{
+    font-size: 3em !important;
+}
+.font-bold{
+    font-weight: 700;
+}
+
+/*Page loader*/
+div#page-loader{
+    background-color: rgba(255,255,255,0);
+    position: fixed;
+    top: 0;
+    left: 0px;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+
+div#page-loader div{
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin: auto;
+    width: 250px;
+    color: black;
+    padding: 20px 30px;
+    background-color: white;
+    border: #e0e0e0 thick solid;
+    border-radius: 5px;
+}
+
+/*Navbar*/
+.navbar-brand{
+    padding: 5px;
+}
+
+.navbar-brand img, .masthead-brand img{
+    border-radius: 5px;
+    height: 40px;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background-color: #260148;
+    border-color: #361158;
+}
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover{
+    color: #361158;
+}
+.pagination>li>a, .pagination>li>span{
+    color: #361158;
+}
+
+
+/*Buttons*/
+button.btn-really-big{
+    font-size: 40px
+}
+
+/*Transaction Jumbotron*/
+.notification.error{
+    background-color: rgba(208, 82, 117, 0.5);
+    -webkit-box-shadow: inset 0 0 100px rgba(208, 82, 117, 0.5);
+    box-shadow: inset 0 0 100px rgba(7,7,7,.5);
+}
+.notification.success{
+    background-color: rgba(76, 175, 80, 0.5);
+    -webkit-box-shadow: inset 0 0 100px rgba(76, 175, 80, 0.5);
+    box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+.notification{
+    padding: 10px;
+    /*background-color: rgba(0,0,0, 0.5);
+        -webkit-box-shadow: inset 0 0 100px rgba(0,0,0, 0.5);
+        box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
+}
+.notification .msg-block{
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+}
+.notification.success .msg-block{
+    background-color: #4CAF50;
+    border: #00796b thin solid;
+}
+.notification.error .msg-block{
+    background-color: #a53957;
+    border: #EF5350 thin solid;
+}
+
+.indent{
+    margin-left: 10px;
+}
+
+.style-home-page2.header2-inn .header2 .content{
+    position: absolute;
+    top: 30%;
+    left: 10px;
+    text-align: center;
+    width: 100%;
+    right: 10px;
+}
+
+/*Stat boxes*/
+.stat div  div{
+    min-height: 50px;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+.stat  div{
+    margin-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.stat{
+    margin-bottom: 30px;
+}
+
+.stat a:hover, .stat a:active, .stat a:focus{
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/**
+* Overrides
+*/
+.header + section .container > div {
+    margin-top: 100px;
+}
+
+.counter:before{
+    opacity: 0.8;
+}
+
+.sec-title h2{
+    color: black;
+}
+
+.marquee {
+    width: 90%;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.marquee span.symbol {
+    /*background-color: #9a9827;*/
+    background-color: #13ae6c;
+    color: lightgray;
+}
+.marquee span.text {
+    color: #9e9e9e;
+}
+.marquee > span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 60s linear infinite;
+}
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+@media (max-width: 580px){
+    .marquee {
+        width: 100%;
+    }
+}
+
+span.header__tagline{
+    margin-top: 15px;
+}
+
+/*Page loader*/
+div#page-loader{
+    background-color: rgba(255,255,255,0);
+    position: fixed;
+    top: 0;
+    left: 0px;
+    z-index: 9000;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+
+div#page-loader div{
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin: auto;
+    width: 250px;
+    color: black;
+    padding: 20px 30px;
+    background-color: white;
+    border: #e0e0e0 thick solid;
+    border-radius: 5px;
+}
+
+/**
+Referrals
+ */
+.reflinks{
+    display: inline-block;
+    padding: 3px;
+    border: #aaa thin solid;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.reflinks-blk{
+    margin-top: 3px;
+}
+
+tfoot td.line div{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+table .used{
+    color: #aaa;
+    background-color: rgba(211, 211, 211, 0.64);
+}
+table .pending{
+    /*color: white;*/
+    background-color: rgba(39, 152, 228, 0.2);
+    /*background-color: skyblue;*/
+}
+table .confirmed{
+    border: lightgrey thin solid;
+    /*background-color: #222;*/
+}
+tfoot td.legend div{
+    display: inline-block;
+    height: 10px;
+    width: 30px;
+}
+tfoot td.legend abbr{
+    margin: auto 20px auto 2px;
+}
+
+
+/*Depth*/
+.z-depth-0, .z-depth-0-hover:hover {
+    box-shadow: none !important;
+}
+
+.z-depth-1, .z-depth-1-hover:hover, .card-panel, .card, .panel, .toast, .dropdown-content, .collapsible {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.z-depth-1-half, .z-depth-1-half-hover:hover, .card:hover, .panel:hover, tbody > tr:hover {
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+}
+
+.z-depth-2, .z-depth-2-hover:hover {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+.z-depth-3, .z-depth-3-hover:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+}
+
+.z-depth-4, .z-depth-4-hover:hover, .modal {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+}
+
+.z-depth-5, .z-depth-5-hover:hover {
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+}
